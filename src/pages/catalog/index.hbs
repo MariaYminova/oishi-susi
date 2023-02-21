@@ -1,0 +1,33 @@
+{{> ../../components/header.hbs}}
+
+
+
+<section class="filter">
+  <div class="filter__left">
+    <button class="button-transparent"> Роллы <div class="button-filter-on"></div>
+    </button>
+    <button class="button-transparent">Сеты <div class="button-filter-on"></div></button>
+    <button class="button-transparent">Запеченные роллы <div class="button-filter-on"></div></button>
+    <button class="button-transparent">Воки <div class="button-filter-on"></div></button>
+    <button class="button-transparent">Супы <div class="button-filter-on"></div></button>
+    <button class="button-transparent">Напитки <div class="button-filter-on"></div></button>
+  </div>
+  <div class="filter__line"></div>
+  <div class="filter__right">
+    <button class="button-with-icon"><img class="m-r-10" src="@assets/icon/icon-star.svg" alt=" "> Популярное</button>
+    <button class="button-with-icon"> <img class="m-r-10" src="@assets/icon/icon-vegi.svg" alt=" ">
+      Вегетарианское</button>
+    <button class="button-with-icon"> <img class="m-r-10" src="@assets/icon/icon-hot.svg" alt=" "> Острое</button>
+  </div>
+
+</section>
+
+<ul class="people_list">
+  {{#each cards}}
+  {{> ../../components/card.hbs}}
+  {{/each}}
+</ul>
+
+{{title}}
+
+{{> ../../components/footer.hbs}}
