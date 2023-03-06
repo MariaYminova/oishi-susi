@@ -1,0 +1,72 @@
+{{> ../../components/wrap-header.hbs}}
+
+<section class="section-order">
+  <h2 class="h2">Оформление заказа</h2>
+  <div class="row">
+    <div class="col-xs-12
+    col-lg-6">
+      <div class="order-block">
+        {{#each cards-order}}
+        {{> ../../components/card-order.hbs}}
+        {{/each}}
+
+        <div class="final-price">
+          <div class="igra m-r-10">Итого:</div>
+          <div class="igra igra-26 igra-orange">1 440 Р</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12
+    col-lg-6">
+      <div class="order-block">
+        <div class=" order-block__section">
+          <div class="m-r-38">
+            <div class="igra m-b-25">Личные данные</div>
+
+            <div class="igra igra-12 order-text-after m-b-5">Ваше имя </div>
+            <input class="input-order m-b-30" type="text">
+
+            <div class="igra igra-12 order-text-after m-b-5">Номер телефона </div>
+            <input class="input-order m-b-30" type="number">
+
+            <div class="igra igra-12 m-b-5">Комментарии к заказу </div>
+            <textarea rows="2" class="input-order input-order__comments m-b-20"
+              placeholder="Например: Нет домофона"></textarea>
+
+          </div>
+          <div>
+            <div class="igra m-b-25">Доставка</div>
+
+            <label class="igra igra-12 order-text-after m-b-5" for="lunch">Выберите адрес</label>
+
+            <select class="input-order test m-b-30" id="lunch" name="lunch">
+              <option class="test" value="pizza">Москва</option>
+            </select>
+
+            <div class="igra igra-12 order-text-after m-b-5">Улица </div>
+            <input class="input-order m-b-30" type="text" placeholder="Укажите улицу доставки">
+
+            <div class="igra igra-12 order-text-after m-b-5">Номер дома </div>
+            <input class="input-order m-b-30" type="text" placeholder="Номер дома">
+
+            <div class="igra igra-12 order-text-after m-b-5">Номер квартиры </div>
+            <input class="input-order m-b-30" type="text" placeholder="Номер квартиры">
+
+          </div>
+        </div>
+        <div class="display-flex">
+          <input class="checkbox m-r-10" type="checkbox">
+
+          <div class="roboto roboto-14">Я согласен с <a class="roboto-orange" href=" ">политикой обраотки персональных
+              данных</a> </div>
+        </div>
+        <button class="button m-t-26"> Оформить заказ</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<a href=""></a>
+{{> ../../components/wrap-footer.hbs}}

@@ -16,7 +16,7 @@
       margin: 0 auto;
       max-width: 200px;
       color: rgb(39, 39, 203);
-      text-align:center
+      text-align: center
     }
 
     .hbs-page-list {
@@ -25,13 +25,13 @@
       max-width: 200px;
       margin-bottom: 20px;
       counter-reset: linksCounter;
-       
+
     }
 
     li {
       font-size: 18px;
       margin-bottom: 15px;
-      border: 2px solid  rgb(140, 140, 202);;
+      border: 2px solid rgb(140, 140, 202);
       padding: 10px 20px;
       border-radius: 5px;
       counter-increment: linksCounter;
@@ -42,12 +42,11 @@
       content: counter(linksCounter) ".";
     }
   </style>
-  <div class="container">
+
     <div class="hbs-title">
       Page lists
     </div>
-  </div>
-
+ 
   <ul class="hbs-page-list">
 
     {{#each pages}}
