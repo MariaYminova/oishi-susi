@@ -56,8 +56,8 @@
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
   flex: 0 0 auto;
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 

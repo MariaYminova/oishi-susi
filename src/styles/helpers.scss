@@ -43,6 +43,14 @@
   &-white {
     color: #ffffff;
   }
+
+  &-green {
+    color: #3ac457;
+  }
+
+  &-red {
+    color: #fb5b1d;
+  }
 }
 
 .roboto {
@@ -54,6 +62,10 @@
 
   &-fw-medium {
     font-weight: 500;
+  }
+
+  &-fw-bold {
+    font-weight: 600;
   }
 
   &-12 {
@@ -135,10 +147,11 @@
   &-r-75 {
     margin-right: 75px;
   }
-  
+
   &-l-5 {
     margin-left: 5px;
   }
+
   &-l-10 {
     margin-left: 10px;
   }
@@ -163,12 +176,24 @@
     margin-bottom: 10px;
   }
 
+  &-b-12 {
+    margin-bottom: 12px;
+  }
+
   &-b-5 {
     margin-bottom: 5px;
   }
 
+  &-b-14 {
+    margin-bottom: 14px;
+  }
+
   &-b-15 {
     margin-bottom: 15px;
+  }
+
+  &-b-16 {
+    margin-bottom: 16px;
   }
 
   &-b-20 {
@@ -194,6 +219,11 @@
   &-b-55 {
     margin-bottom: 55px;
   }
+
+  &-b-53 {
+    margin-bottom: 53px;
+  }
+
 
   &-b-80 {
     margin-bottom: 80px;
@@ -221,5 +251,9 @@
 
   &-t-43 {
     margin-top: 43px;
+  }
+
+  &-t-60 {
+    margin-top: 60px;
   }
 }

@@ -6,15 +6,12 @@
 }
 
 textarea {
-	resize: none;
+  resize: none;
   outline: none;
 }
 
-.checkbox{
-
+.checkbox {
 }
-
-
 
 .display-flex {
   display: flex;
@@ -27,21 +24,15 @@ textarea {
   color: #404040;
 }
 
-.order-text-after{
-
+.order-text-after {
   &::after {
     content: "*";
-    color: #F0AF3B;
+    color: #f0af3b;
   }
-  
 }
 
-.test{
-  padding: 10px;
-}
-
-.input-order{
-  border: solid 2px #F5F5F5;
+.input-order {
+  border: solid 2px #f5f5f5;
   border-radius: 6px;
   width: 100%;
   padding: 14px 20px;
@@ -50,7 +41,7 @@ textarea {
   color: #404040;
   font-size: 14px;
 
-  &__comments{
+  &__comments {
     height: 153px;
   }
 }
@@ -58,6 +49,7 @@ textarea {
 .container {
   max-width: 1620px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header {
@@ -118,6 +110,25 @@ textarea {
   margin-top: 60px;
 }
 
+.section-map{
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 40px 40px 40px 60px;
+  display: flex;
+  justify-content: space-between;
+
+  &__block{
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  &__map{
+    width: 1165px;
+    height: 463px;
+    background-color: #f6f6f6;
+  }
+}
+
 .slider-popular {
   overflow: visible;
   max-width: 1920px;
@@ -129,11 +140,28 @@ textarea {
   padding: 30px 40px;
   margin-bottom: 18px;
 
-  &__section{
+  &__section {
     display: flex;
     max-width: 566px;
   }
 
+  &__address{
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #F7F7F7;
+    width: 350px;
+    height: 64;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 21px 20px 0px;
+  }
+
+  &__text{
+    width: 288px;
+    height: 24px;
+    overflow: hidden;
+  }
 }
 
 .card-menu {
@@ -166,9 +194,35 @@ textarea {
   justify-content: flex-end;
 }
 
-.icon-block{
+.account-info {
+  display: flex;
+}
+
+.account-block {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 30px 40px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-block {
   display: flex;
   flex-direction: column;
+}
+
+.account-gray-block {
+  padding: 30px 100px 43px 30px;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
 
 .button {
@@ -246,6 +300,21 @@ textarea {
     background-image: url("~@assets/icon/icon-cross.svg");
     width: 12px;
     height: 12px;
+  }
+}
+
+.button-delete{
+  background-color: #ffffff;
+  border-radius: 6px;
+  width: 22px;
+  height: 22px;
+  padding: 7px;
+  
+
+  &__img {
+    background-image: url("~@assets/icon/icon-cross-acc.svg");
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -523,8 +592,6 @@ textarea {
   align-content: flex-start;
 
   &__card {
-    margin: 0 18px 18px 0;
-    width: 391px;
     height: 548px;
     background-color: #ffffff;
     border-radius: 6px;
