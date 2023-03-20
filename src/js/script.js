@@ -10,19 +10,19 @@ const swiperBaner = new Swiper(".slider-baner", {
 });
 
 
-window.onload = function() {
+window.onload = function () {
   const swiperPop = new Swiper(".slider-popular", {
     slidesPerView: 'auto',
     spaceBetween: 18,
-  
+
     scrollbar: {
       el: ".scrollbar-popular",
       draggable: true,
       dragSize: 143,
     },
   });
-  
-  console.log({swiperPop: document.querySelector('.scrollbar-popular')})
+
+  console.log({ swiperPop: document.querySelector('.scrollbar-popular') })
 }
 
 
@@ -90,22 +90,142 @@ btnlike.forEach(item => {
   })
 })
 
+const randomNumber = document.querySelectorAll('.like-number');
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+randomNumber.forEach(number => {
+  const min = 0;
+  const max = 99;
+  const randomValue = getRandomInt(min, max);
+  number.textContent = randomValue;
+});
 
 
+const cartBlocks = document.querySelectorAll('.btn-add-cart__block');
 
-const btnLike = document.querySelectorAll('.icon-like');
+cartBlocks.forEach((cartBlock) => {
+  const countSpan = cartBlock.querySelector('.btn-add-cart__count');
+  const plusBtn = cartBlock.querySelector('.btn-add-cart__plus');
+  const minusBtn = cartBlock.querySelector('.btn-add-cart__minus');
 
-let like = true,
-  likeCount = document.querySelector('.like-number').innerHTML;
+  plusBtn.addEventListener('click', () => {
 
-btnLike.forEach(item => {
-  item.addEventListener('click', () => {
-
-    likeCount = like ? ++likeCount : --likeCount;
-    like = !like;
-    document.querySelector('.like-number').innerHTML = likeCount;
+    countSpan.innerText = parseInt(countSpan.innerText) + 1;
   });
+
+  minusBtn.addEventListener('click', () => {
+    countSpan.innerText = Math.max(parseInt(countSpan.innerText) - 1, 1);
+  });
+});
+
+const inputs = document.querySelectorAll('.ui-input');
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    const value = input.value;
+    if (value.length >= 1) {
+      input.classList.remove('ui-input--error');
+      input.classList.add('ui-input--success');
+    } else {
+      input.classList.remove('ui-input--success');
+      input.classList.add('ui-input--error');
+    }
+  });
+});
+
+
+const likeBlocks = document.querySelectorAll('.like-block');
+
+likeBlocks.forEach((likeBlock) => {
+  const likeNumber = likeBlock.querySelector('.like-number');
+  const likeBtn = likeBlock.querySelector('.icon-like');
+
+
+  likeBtn.addEventListener('click', () => {
+
+    let currentLikes = parseInt(likeNumber.innerText);
+
+    if (likeBtn.classList.contains('liked')) {
+      currentLikes--;
+    }
+    else {
+      currentLikes++;
+    }
+
+    likeNumber.innerText = currentLikes;
+    likeBtn.classList.toggle('liked');
+  });
+});
+
+
+const accTitle = document.querySelectorAll('.ui-accordion__head')
+
+accTitle.forEach(item => {
+  item.addEventListener('click', function () {
+    const acc = this.parentElement;
+    const accBody = acc.querySelector('.ui-accordion__body')
+    let bodyHeight = 0
+    const isClosed = acc.classList.contains('ui-accordion--closed')
+
+    if (isClosed) {
+      accBody.style.height = null
+      acc.classList.remove('ui-accordion--closed')
+      bodyHeight = accBody.offsetHeight + 'px'
+      accBody.style.height = '0px'
+
+      accBody.classList.add('ui-accordion__body--animate')
+      accBody.offsetHeight;
+      accBody.style.height = bodyHeight
+      setTimeout(() => {
+        accBody.style.height = null
+        accBody.classList.remove('ui-accordion__body--animate')
+      }, 300)
+
+    } else {
+      bodyHeight = accBody.offsetHeight + 'px'
+      accBody.style.height = bodyHeight
+      accBody.offsetHeight;
+      accBody.classList.add('ui-accordion__body--animate')
+      acc.classList.add('ui-accordion--closed')
+      accBody.style.height = '0px'
+
+      setTimeout(() => {
+        accBody.classList.remove('ui-accordion__body--animate')
+      }, 300)
+
+    }
+  })
 })
+
+
+const buttons = document.querySelectorAll(".person")
+const popup = document.querySelector(".popup")
+const buttonClose = document.querySelector(".popup__close")
+const popupBlock = document.querySelector(".popup__block")
+
+function openPopup() {
+  popup.classList.add("open-popup")
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup")
+}
+
+buttons.forEach((button) => {
+  button.addEventListener("click", openPopup)
+})
+
+buttonClose.addEventListener("click", closePopup)
+
+popup.addEventListener("click", closePopup)
+
+popupBlock.addEventListener("click", (event) => {
+  event.stopPropagation()
+})
+
 
 
 

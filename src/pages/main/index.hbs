@@ -1,4 +1,17 @@
 {{> ../../components/wrap-header.hbs}}
+<div class="popup">
+<div class="popup__block">
+  <button class="popup__close"> <img src="@assets/icon/icon-popup-close.svg" alt=""> </button>
+  <div class="igra igra-26 m-b-34"> Вход</div>
+  <div class="igra igra-12 order-text-after m-b-5">Номер телефона </div>
+  <input class="ui-input m-b-30" type="text">
+  <div class="igra igra-12 order-text-after m-b-5">Пароль </div>
+  <input class="ui-input m-b-30" type="text">
+  <button class="button button__pop-up ">Войти</button>
+  <button class="igra igra-12 igra-orange button-pop-up m-t-30">Забыли пароль?</button>
+</div>
+</div>
+
 
 <main>
   <section class="section-big">
@@ -28,7 +41,7 @@
               <div class="btn-add-cart m-t-43">
                 <div class="rtg"></div>
                 <div class="btn-add-cart__block">
-                  <button class="btn-add-cart__plus"></button> 1
+                  <button class="btn-add-cart__plus"></button> <span class="btn-add-cart__count"> 1 </span>
                   <button class="btn-add-cart__minus"></button>
                 </div>
 
@@ -54,7 +67,7 @@
               <div class="btn-add-cart m-t-43">
                 <div class="rtg"></div>
                 <div class="btn-add-cart__block">
-                  <button class="btn-add-cart__plus"></button> 1
+                  <button class="btn-add-cart__plus"></button> <span class="btn-add-cart__count"> 1 </span>
                   <button class="btn-add-cart__minus"></button>
                 </div>
 
@@ -81,7 +94,7 @@
                 <div class="rtg"></div>
 
                 <div class="btn-add-cart__block">
-                  <button class="btn-add-cart__plus"></button> 1
+                  <button class="btn-add-cart__plus"></button> <span class="btn-add-cart__count"> 1 </span>
                   <button class="btn-add-cart__minus"></button>
                 </div>
 
@@ -91,8 +104,6 @@
               </div>
             </div>
           </div>
-
-
         </div>
         <div class="swiper-pagination pagination-baner"></div>
         <div class="background-grey"></div>
@@ -102,81 +113,81 @@
 
   <section class="section-menu">
 
-      <div class="row">
-        <div class="col-xs-12
+    <div class="row">
+      <div class="col-xs-12
                     col-sm-12
                     col-md-6
                     col-lg-4">
-          <div class="card-menu">
-            <div class="igra igra-26">Роллы</div>
+        <div class="card-menu">
+          <div class="igra igra-26">Роллы</div>
 
-            <img src="@assets/img/img-susi.png" alt="" class="card-menu__img">
+          <img src="@assets/img/img-susi.png" alt="" class="card-menu__img">
 
-          </div>
         </div>
+      </div>
 
-        <div class="col-xs-12
+      <div class="col-xs-12
         col-sm-12
         col-md-6
         col-lg-4">
-          <div class="card-menu">
-            <div class="igra igra-26">Сеты</div>
+        <div class="card-menu">
+          <div class="igra igra-26">Сеты</div>
 
-            <img src="@assets/img/img-set.png" alt="" class="card-menu__img">
+          <img src="@assets/img/img-set.png" alt="" class="card-menu__img">
 
-          </div>
         </div>
-
-        <div class="col-xs-12
-    col-sm-12
-    col-md-6
-    col-lg-4">
-          <div class="card-menu">
-            <div class="igra igra-26">Запеченные роллы</div>
-
-            <img src="@assets/img/img-hot.png" alt="" class="card-menu__img">
-
-          </div>
-        </div>
-
-        <div class="col-xs-12
-    col-sm-12
-    col-md-6
-    col-lg-4">
-          <div class="card-menu">
-            <div class="igra igra-26">Воки</div>
-
-            <img src="@assets/img/img-vok.png" alt="" class="card-menu__img">
-
-          </div>
-        </div>
-
-        <div class="col-xs-12
-    col-sm-12
-    col-md-6
-    col-lg-4">
-          <div class="card-menu">
-            <div class="igra igra-26">Супы</div>
-
-            <img src="@assets/img/img-sup.png" alt="" class="card-menu__img">
-
-          </div>
-        </div>
-
-        <div class="col-xs-12
-    col-sm-12
-    col-md-6
-    col-lg-4">
-          <div class="card-menu">
-            <div class="igra igra-26 ">Напитки</div>
-
-            <img src="@assets/img/img-drinks.png" alt="" class="card-menu__img">
-
-          </div>
-        </div>
-
       </div>
-    
+
+      <div class="col-xs-12
+    col-sm-12
+    col-md-6
+    col-lg-4">
+        <div class="card-menu">
+          <div class="igra igra-26">Запеченные роллы</div>
+
+          <img src="@assets/img/img-hot.png" alt="" class="card-menu__img">
+
+        </div>
+      </div>
+
+      <div class="col-xs-12
+    col-sm-12
+    col-md-6
+    col-lg-4">
+        <div class="card-menu">
+          <div class="igra igra-26">Воки</div>
+
+          <img src="@assets/img/img-vok.png" alt="" class="card-menu__img">
+
+        </div>
+      </div>
+
+      <div class="col-xs-12
+    col-sm-12
+    col-md-6
+    col-lg-4">
+        <div class="card-menu">
+          <div class="igra igra-26">Супы</div>
+
+          <img src="@assets/img/img-sup.png" alt="" class="card-menu__img">
+
+        </div>
+      </div>
+
+      <div class="col-xs-12
+    col-sm-12
+    col-md-6
+    col-lg-4">
+        <div class="card-menu">
+          <div class="igra igra-26 ">Напитки</div>
+
+          <img src="@assets/img/img-drinks.png" alt="" class="card-menu__img">
+
+        </div>
+      </div>
+
+    </div>
+
   </section>
 
   <section class="section-popular">
