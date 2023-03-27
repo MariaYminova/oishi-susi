@@ -1,5 +1,9 @@
 {{> ../../components/wrap-header.hbs}}
 
+{{> ../../components/pop-up.hbs}}
+
+
+
 <section class="section-order">
   <h2 class="h2">Оформление заказа</h2>
   <div class="row">
@@ -26,24 +30,28 @@
             <div class="igra m-b-25">Личные данные</div>
 
             <div class="igra igra-12 order-text-after m-b-5">Ваше имя </div>
-            <input class="ui-input m-b-30" type="text">
+            <input class="ui-input m-b-30" placeholder="Ваше имя" type="text">
 
             <div class="igra igra-12 order-text-after m-b-5">Номер телефона </div>
-            <input class="input-order input-number  m-b-30" type="number">
+
+            <input id="phone-mask" class="input-order input-number m-b-30" type="text" placeholder="Номер">
 
             <div class="igra igra-12 m-b-5">Комментарии к заказу </div>
-            <textarea rows="2" class=" ui-input input-order input-order__comments m-b-20"
+            <textarea rows="2" class="input-order input-order__comments m-b-20"
               placeholder="Например: Нет домофона"></textarea>
 
           </div>
           <div>
             <div class="igra m-b-25">Доставка</div>
 
-            <label class="igra igra-12 order-text-after m-b-5" for="lunch">Выберите адрес</label>
-
-            <select class="input-order test m-b-30" id="lunch" name="lunch">
-              <option class="test" value="pizza">Москва</option>
+            <div class="igra igra-12 m-b-5 ">Выберите адрес</div>
+            <select id="ui-select" class="roboto roboto-14" >
+             
+              <option class="roboto roboto-14" value="foo">ул. Пушкинская 11</option>
+              <option value="buz">ул. Ленина 89 </option>
             </select>
+
+            
 
             <div class="igra igra-12 order-text-after m-b-5">Улица </div>
             <input class=" ui-input input-order m-b-30" type="text" placeholder="Укажите улицу доставки">
@@ -71,5 +79,3 @@
 <a href=""></a>
 
 {{> ../../components/wrap-footer.hbs}}
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>

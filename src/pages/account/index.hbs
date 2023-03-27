@@ -10,7 +10,6 @@
         <div class="display-flex">
           <img class="m-r-30" src="@assets\img\img-avatar.png" alt=" ">
 
-
           <div>
             <div class="igra igra-20 m-b-5">Олег Хамитов</div>
             <div class="roboto riboto-14 roboto-grey m-b-14">7 (901) 324 - 98 - 12</div>
@@ -71,6 +70,40 @@
     </div>
 
   </div>
+</section>
+
+<section class="section-tab">
+
+  <div class="tabs">
+    
+      <div class="tabs__nav-btn igra igra-20 active" data-tab="#tab-all"> Избранное</div>
+
+      <div class="tabs__nav-btn igra igra-20" data-tab="#tab-banquet"> История заказов</div>
+      
+  </div>
+  <img class="tabs__line"
+  src="@assets/icon/icon-line-tab.svg" alt="">
+
+  <div id="tab-all" class="block-card active">
+
+    <ul class="people_list row">
+      {{#each cards-favourites}}
+      {{> ../../components/card.hbs}}
+      {{/each}}
+    </ul>
+
+  </div>
+
+  <div id="tab-banquet" class="block-card">
+
+    <ul class="row">
+      {{#each cards-order-history}}
+      {{> ../../components/card.hbs}}
+      {{/each}}
+    </ul>
+  </div>
+
+
 </section>
 
 {{> ../../components/wrap-footer.hbs}}

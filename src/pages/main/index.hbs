@@ -1,16 +1,7 @@
 {{> ../../components/wrap-header.hbs}}
-<div class="popup">
-<div class="popup__block">
-  <button class="popup__close"> <img src="@assets/icon/icon-popup-close.svg" alt=""> </button>
-  <div class="igra igra-26 m-b-34"> Вход</div>
-  <div class="igra igra-12 order-text-after m-b-5">Номер телефона </div>
-  <input class="ui-input m-b-30" type="text">
-  <div class="igra igra-12 order-text-after m-b-5">Пароль </div>
-  <input class="ui-input m-b-30" type="text">
-  <button class="button button__pop-up ">Войти</button>
-  <button class="igra igra-12 igra-orange button-pop-up m-t-30">Забыли пароль?</button>
-</div>
-</div>
+
+
+{{> ../../components/pop-up.hbs}}
 
 
 <main>
@@ -120,9 +111,7 @@
                     col-lg-4">
         <div class="card-menu">
           <div class="igra igra-26">Роллы</div>
-
           <img src="@assets/img/img-susi.png" alt="" class="card-menu__img">
-
         </div>
       </div>
 
@@ -130,11 +119,9 @@
         col-sm-12
         col-md-6
         col-lg-4">
-        <div class="card-menu">
+        <div class="card-menu card-menu__img-bg">
           <div class="igra igra-26">Сеты</div>
-
           <img src="@assets/img/img-set.png" alt="" class="card-menu__img">
-
         </div>
       </div>
 

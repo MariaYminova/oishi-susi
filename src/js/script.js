@@ -1,7 +1,9 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper/bundle'
+import IMask from 'imask'
+import customSelect from 'custom-select';
 
 
-
+customSelect(document.getElementById('ui-select'));
 
 const swiperBaner = new Swiper(".slider-baner", {
   pagination: {
@@ -25,7 +27,7 @@ window.onload = function () {
   console.log({ swiperPop: document.querySelector('.scrollbar-popular') })
 }
 
-
+//слайдер (закоментировать)
 
 const tabsBtn = document.querySelectorAll(".navigation__tab")
 const tabsitem = document.querySelectorAll(".slider-positions__slide")
@@ -63,6 +65,9 @@ filterBtn.forEach(item => {
   })
 })
 
+
+//иконки фильтра
+
 const filterBtnIcon = document.querySelectorAll(".button-with-icon")
 
 filterBtnIcon.forEach(item => {
@@ -71,6 +76,10 @@ filterBtnIcon.forEach(item => {
     item.classList.add('active')
   })
 })
+
+
+//иконка звездочки
+
 
 const btnStar = document.querySelectorAll(".button-star")
 
@@ -81,6 +90,8 @@ btnStar.forEach(item => {
   })
 })
 
+//иконка лайка актив
+
 const btnlike = document.querySelectorAll(".icon-like")
 
 btnlike.forEach(item => {
@@ -89,6 +100,8 @@ btnlike.forEach(item => {
 
   })
 })
+
+//рандом числа лайка
 
 const randomNumber = document.querySelectorAll('.like-number');
 
@@ -121,6 +134,8 @@ cartBlocks.forEach((cartBlock) => {
   });
 });
 
+//чек инпута
+
 const inputs = document.querySelectorAll('.ui-input');
 
 inputs.forEach(input => {
@@ -136,6 +151,24 @@ inputs.forEach(input => {
   });
 });
 
+//чек маски номера
+
+const selectCheck = document.querySelectorAll('.input-number');
+
+selectCheck.forEach(input => {
+  input.addEventListener('input', () => {
+    const value = input.value;
+    if (value.length >= 16) {
+      input.classList.remove('input-number--error');
+      input.classList.add('input-number--success');
+    } else {
+      input.classList.remove('input-number--success');
+      input.classList.add('input-number--error');
+    }
+  });
+});
+
+//иконка лайка
 
 const likeBlocks = document.querySelectorAll('.like-block');
 
@@ -160,6 +193,7 @@ likeBlocks.forEach((likeBlock) => {
   });
 });
 
+//аккардион
 
 const accTitle = document.querySelectorAll('.ui-accordion__head')
 
@@ -198,10 +232,19 @@ accTitle.forEach(item => {
 
     }
   })
-})
+});
+
+//маска номер
+
+let phoneMask = IMask(
+  document.getElementById('phone-mask'), {
+  mask: '+{7}(000)000-00-00'
+});
 
 
-const buttons = document.querySelectorAll(".person")
+//pop-up
+
+const buttons = document.querySelectorAll(".rtg-white")
 const popup = document.querySelector(".popup")
 const buttonClose = document.querySelector(".popup__close")
 const popupBlock = document.querySelector(".popup__block")
@@ -218,9 +261,12 @@ buttons.forEach((button) => {
   button.addEventListener("click", openPopup)
 })
 
+
 buttonClose.addEventListener("click", closePopup)
 
+
 popup.addEventListener("click", closePopup)
+
 
 popupBlock.addEventListener("click", (event) => {
   event.stopPropagation()
@@ -229,14 +275,29 @@ popupBlock.addEventListener("click", (event) => {
 
 
 
+//account табы 
 
+const tabsBtnAcc = document.querySelectorAll(".tabs__nav-btn")
+const tabsitemAcc = document.querySelectorAll(".block-card")
 
+tabsBtnAcc.forEach(function (item) {
+  item.addEventListener("click", function () {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute("data-tab");
+    let currentTab = document.querySelector(tabId);
 
+    tabsBtnAcc.forEach(function (item) {
+      item.classList.remove('active');
+    });
 
+    tabsitemAcc.forEach(function (item) {
+      item.classList.remove('active');
+    });
 
-
-
-
+    currentBtn.classList.add('active');
+    currentTab.classList.add('active');
+  });
+});
 
 
 
