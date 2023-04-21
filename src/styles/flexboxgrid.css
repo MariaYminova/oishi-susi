@@ -56,8 +56,8 @@
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
   flex: 0 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 9px;
+  padding-left: 9px;
 }
 
 
@@ -249,7 +249,7 @@
   order: 1;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 580px) {
 
   .col-sm,
   .col-sm-1,
@@ -270,7 +270,6 @@
     flex: 0 0 auto;
     padding-right: 4.5px;
     padding-left: 4.5px;
-    padding-bottom: 9px;
   }
 
   .col-sm {
@@ -483,7 +482,6 @@
     flex: 0 0 auto;
     padding-right: 9px;
     padding-left: 9px;
-    padding-bottom: 18px;
   }
 
   .col-md {
@@ -697,7 +695,6 @@
     flex: 0 0 auto;
     padding-right: 9px;
     padding-left: 9px;
-    padding-bottom: 19px;
   }
 
   .col-lg {

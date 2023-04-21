@@ -3,19 +3,57 @@ import IMask from 'imask'
 import customSelect from 'custom-select';
 
 
-customSelect(document.getElementById('ui-select'));
+
+
+
+const select1 = document.querySelector('.ui-select-filter');
+const select2 = document.querySelector('.ui-select-address');
+
+customSelect(select1);
+customSelect(select2);
 
 const swiperBaner = new Swiper(".slider-baner", {
+ 
   pagination: {
     el: ".pagination-baner",
+    clickable: true
   },
 });
+
+//поп ап
+
+const buttons = document.querySelectorAll(".person")
+const popup = document.querySelector(".popup")
+const buttonClose = document.querySelector(".popup__close")
+const popupBlock = document.querySelector(".popup__block")
+
+function openPopup() {
+  popup.classList.add("open-popup")
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup")
+}
+
+buttons.forEach((button) => {
+  button.addEventListener("click", openPopup)
+})
+
+buttonClose.addEventListener("click", closePopup)
+
+popup.addEventListener("click", closePopup)
+
+popupBlock.addEventListener("click", (event) => {
+  event.stopPropagation()
+})
+
 
 
 window.onload = function () {
   const swiperPop = new Swiper(".slider-popular", {
     slidesPerView: 'auto',
     spaceBetween: 18,
+    
 
     scrollbar: {
       el: ".scrollbar-popular",
@@ -23,6 +61,7 @@ window.onload = function () {
       dragSize: 143,
     },
   });
+  
 
   console.log({ swiperPop: document.querySelector('.scrollbar-popular') })
 }
@@ -80,7 +119,6 @@ filterBtnIcon.forEach(item => {
 
 //иконка звездочки
 
-
 const btnStar = document.querySelectorAll(".button-star")
 
 btnStar.forEach(item => {
@@ -116,6 +154,8 @@ randomNumber.forEach(number => {
   number.textContent = randomValue;
 });
 
+
+//кнопка количества товара
 
 const cartBlocks = document.querySelectorAll('.btn-add-cart__block');
 
@@ -198,9 +238,12 @@ likeBlocks.forEach((likeBlock) => {
 const accTitle = document.querySelectorAll('.ui-accordion__head')
 
 accTitle.forEach(item => {
+  const acc = item.parentElement;
+  const accBody = acc.querySelector('.ui-accordion__body');
+  accBody.style.height = '0px';
+  acc.classList.add('ui-accordion--closed');
+
   item.addEventListener('click', function () {
-    const acc = this.parentElement;
-    const accBody = acc.querySelector('.ui-accordion__body')
     let bodyHeight = 0
     const isClosed = acc.classList.contains('ui-accordion--closed')
 
@@ -209,7 +252,6 @@ accTitle.forEach(item => {
       acc.classList.remove('ui-accordion--closed')
       bodyHeight = accBody.offsetHeight + 'px'
       accBody.style.height = '0px'
-
       accBody.classList.add('ui-accordion__body--animate')
       accBody.offsetHeight;
       accBody.style.height = bodyHeight
@@ -225,53 +267,23 @@ accTitle.forEach(item => {
       accBody.classList.add('ui-accordion__body--animate')
       acc.classList.add('ui-accordion--closed')
       accBody.style.height = '0px'
-
       setTimeout(() => {
         accBody.classList.remove('ui-accordion__body--animate')
       }, 300)
-
     }
   })
 });
 
 //маска номер
 
-let phoneMask = IMask(
-  document.getElementById('phone-mask'), {
-  mask: '+{7}(000)000-00-00'
-});
+const phoneMask = document.querySelectorAll('.js-phone-mask')
 
+phoneMask.forEach(item => {
+  IMask(item, {
+    mask: '+{7}(000)000-00-00'
+  })
 
-//pop-up
-
-const buttons = document.querySelectorAll(".rtg-white")
-const popup = document.querySelector(".popup")
-const buttonClose = document.querySelector(".popup__close")
-const popupBlock = document.querySelector(".popup__block")
-
-function openPopup() {
-  popup.classList.add("open-popup")
-}
-
-function closePopup() {
-  popup.classList.remove("open-popup")
-}
-
-buttons.forEach((button) => {
-  button.addEventListener("click", openPopup)
 })
-
-
-buttonClose.addEventListener("click", closePopup)
-
-
-popup.addEventListener("click", closePopup)
-
-
-popupBlock.addEventListener("click", (event) => {
-  event.stopPropagation()
-})
-
 
 
 

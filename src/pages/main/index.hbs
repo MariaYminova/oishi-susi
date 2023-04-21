@@ -1,9 +1,6 @@
 {{> ../../components/wrap-header.hbs}}
 
 
-{{> ../../components/pop-up.hbs}}
-
-
 <main>
   <section class="section-big">
     <div class="rtg-slider"></div>
@@ -17,7 +14,7 @@
       <div class="swiper slider-baner">
         <div class="swiper-wrapper">
 
-          <div class="swiper-slide slide-baner">
+          <div class="swiper-slide swiper-slide-baner slide-baner">
             <div class="slide-baner__img"><img src="@assets/img/img-susu-baner.png" alt=" "></div>
             <div>
               <h3 class="igra igra-14 igra-grey m-b-10">РОЛЛ</h3>
@@ -119,7 +116,10 @@
         col-sm-12
         col-md-6
         col-lg-4">
-        <div class="card-menu card-menu__img-bg">
+        <div class="card-menu">
+        <div class="card-menu__bg-orange"></div>
+        <div class="card-menu__bg-green"></div>
+        <div class="card-menu__bg-pink"></div>
           <div class="igra igra-26">Сеты</div>
           <img src="@assets/img/img-set.png" alt="" class="card-menu__img">
         </div>
@@ -166,7 +166,7 @@
     col-md-6
     col-lg-4">
         <div class="card-menu">
-          <div class="igra igra-26 ">Напитки</div>
+          <div class="igra igra-26">Напитки</div>
 
           <img src="@assets/img/img-drinks.png" alt="" class="card-menu__img">
 
@@ -184,7 +184,9 @@
     <div class="swiper slider-popular">
       <div class="swiper-wrapper">
         {{#each cards}}
-        {{> ../../components/card-slider.hbs}}
+        <div class="swiper-slide swiper-slide-width">
+          {{> ../../components/card.hbs}}
+        </div>
         {{/each}}
       </div>
       <div class="scrollbar-popular"></div>
