@@ -47,8 +47,9 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: ({module}) => {
-            const pathParts = module.context.split("/");
+            const pathParts = module.context.split(/[\\/]/);
             const type = pathParts[pathParts.length - 1];
+            
             return `assets/${type}/[name][ext]`;
           }
         }

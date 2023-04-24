@@ -1,16 +1,9 @@
 import Swiper from 'swiper/bundle'
 import IMask from 'imask'
-import customSelect from 'custom-select';
+import customSelects from './customSelects';
 
 
-
-
-
-const select1 = document.querySelector('.ui-select-filter');
-const select2 = document.querySelector('.ui-select-address');
-
-customSelect(select1);
-customSelect(select2);
+customSelects()
 
 const swiperBaner = new Swiper(".slider-baner", {
  

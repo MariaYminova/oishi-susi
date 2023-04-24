@@ -19,16 +19,18 @@
       Вегетарианское</button>
     <button class="button-with-icon"> <img class="m-r-10" src="@assets/icon/icon-hot.svg" alt=" "> Острое</button>
   </div>
-  <div class="filter__mob ">
+  <div class="filter__mob">
     <div class="igra filter__mob-text">Фильтры</div>
-    <select id="ui-select-filter" class="ui-select-filter roboto roboto-16 roboto-orange">
-      <option class="roboto roboto-16 roboto-orange" value="foo">Роллы</option>
-      <option value="buz">Сеты </option>
-      <option value="buz">Запеченные роллы </option>
-      <option value="buz">Воки </option>
-      <option value="buz">Супы </option>
-      <option value="buz">Напитки </option>
-    </select>
+    <div class="ui-select ui-select--filter">
+      <select class="customSelect roboto roboto-16 roboto-orange">
+        <option class="roboto roboto-16 roboto-orange" >Роллы</option>
+        <option>Сеты </option>
+        <option>Запеченные роллы </option>
+        <option>Воки </option>
+        <option>Супы </option>
+        <option>Напитки </option>
+      </select>
+    </div>
   </div>
 </section>
 
@@ -45,6 +47,5 @@
   {{/each}}
 
 </div>
-
 
 {{> ../../components/wrap-footer.hbs}}

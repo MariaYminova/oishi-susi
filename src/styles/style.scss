@@ -5,6 +5,9 @@
   font-style: normal;
 }
 
+.test{
+  width: 100%;
+}
 textarea {
   resize: none;
   outline: none;
@@ -17,6 +20,13 @@ textarea {
 .heading {
   font-size: 26px;
   margin: 60px 0 30px 0;
+}
+
+.h2 {
+  font-size: 26px;
+  margin-bottom: 22px;
+  font-family: "Igra Sans";
+  color: #404040;
 }
 
 .order-text-after {
@@ -112,6 +122,7 @@ textarea {
     background-color: #ffffff;
     border-radius: 6px 6px 0 0;
     padding: 40px;
+    font-size: 26px;
   }
 }
 
@@ -160,6 +171,7 @@ textarea {
     transform-origin: bottom;
     transition: 0.2s;
   }
+
   &__nav-btn.active {
     color: #000000;
   }
@@ -267,6 +279,11 @@ textarea {
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 34px;
+    font-size: 26px;
+  }
+
+  &__title {
+    font-size: 26px;
   }
 }
 
@@ -355,6 +372,7 @@ textarea {
     top: -15%;
     left: -7%;
   }
+
   &__bg-green {
     position: absolute;
     background-image: url("~@assets/icon/icon-card-bg-green.svg");
@@ -363,6 +381,7 @@ textarea {
     top: 92%;
     left: -2%;
   }
+
   &__bg-pink {
     position: absolute;
     background-image: url("~@assets/icon/icon-card-bg-pink.svg");
@@ -374,10 +393,10 @@ textarea {
 }
 
 .card-order {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 26px;
+  display: flex;
   height: 106px;
   border-bottom: solid 2px #f7f7f7;
 
@@ -386,15 +405,24 @@ textarea {
     max-height: 82px;
   }
 
-  &__icon{
-    width:19px ;
-    height:17px ;
-  }
-  
-  &__mob-description{
-    width: 100%;
+  &__info {
     display: flex;
-   }
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  &__icon {
+    width: 19px;
+    height: 17px;
+    margin: 0 30px 10px 0;
+  }
+
+  &__img-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 22px;
+  }
 }
 
 .text-account {
@@ -404,8 +432,13 @@ textarea {
 
 .final-price {
   display: flex;
-  align-items: flex-end;
   justify-content: flex-end;
+  align-items: baseline;
+
+  &__total {
+    color: #f0af3b;
+    font-size: 26px;
+  }
 }
 
 .account-info {
@@ -635,15 +668,15 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 3px;
-    margin: 5px 7px 0 5px;
     z-index: 2;
   }
+
   &__plus {
     background-image: url("~@assets/icon/icon-plus.svg");
     width: 18px;
     height: 18px;
   }
+
   &__minus {
     background-image: url("~@assets/icon/icon-minus.svg");
     width: 18px;
@@ -944,80 +977,6 @@ textarea {
   flex-direction: row;
 }
 
-.ui-select-address {
-}
-
-.custom-select-opener {
-  background-color: #fefefe;
-  padding: 14px 20px;
-  display: block;
-  cursor: pointer;
-  border-radius: 6px;
-  border: 2px solid #f5f5f5;
-  margin: 5px 0 30px;
-  width: 348px;
-
-  &:after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 7px;
-    background-image: url(~@assets/icon/icon-select-arrow.svg);
-    position: absolute;
-    right: 29px;
-    top: calc(50% - 4px);
-  }
-}
-
-.custom-select-option.has-focus {
-  background-color: rgb(255, 255, 255);
-}
-
-.custom-select-option.is-selected {
-  background-color: rgb(255, 255, 255);
-}
-
-.custom-select-container.is-open .custom-select-panel {
-  max-height: 10.7em;
-  overflow: clip;
-}
-
-.custom-select-option {
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #404040;
-  padding: 14px 20px;
-}
-
-span {
-  font-size: 14px;
-  color: #5c5c5c;
-}
-
-.custom-select-option.is-selected::after {
-  content: "+";
-  padding-right: 0.5em;
-  color: #f0af3b;
-}
-
-.custom-select-option.is-selected::before {
-  content: "✔";
-  padding-right: 0.5em;
-  display: none;
-}
-
-.custom-select-panel {
-  margin-top: 7px;
-  color: #000000;
-  font-size: 14px;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 @media (min-width: 1440px) {
   .footer-adaptive {
     display: none;
@@ -1030,6 +989,7 @@ span {
     &__mob {
       display: flex;
     }
+
     &__mob-text {
       font-weight: 16px;
       margin-right: 30px;
@@ -1047,46 +1007,6 @@ span {
       display: none;
     }
   }
-
-  span {
-    font-size: 16px;
-  }
-
-  .ui-select-filter{
-    border: 1px solid #4cbe66;
-  }
-
-
-  .custom-select-option.has-focus {
-    color: #c77024;
-  }
-
-  .custom-select-opener {
-    background-color: #fefefe00;
-    padding: 0px 0px;
-    display: block;
-    cursor: pointer;
-    border-radius: 6px;
-    border: 0px solid #ffffff;
-    margin: 3px 0 0px;
-    width: 195px;
-  }
-
-  .custom-select-container.is-open .custom-select-panel {
-    overflow: clip;
-  }
-
-  .custom-select-opener:after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 7px;
-    background-image: url("http://localhost:8080/assets/C:/www/oishi-susi/src/assets/icon/icon-select-arrow.svg");
-    position: absolute;
-    right: 22px;
-    top: 27px;
-  }
-  
 
   .header {
     &__center {
@@ -1241,6 +1161,7 @@ span {
 }
 
 @media (max-width: 850px) {
+
   .roboto {
     &-16 {
       font-size: 14px;
@@ -1287,6 +1208,21 @@ span {
     margin-top: 22px;
   }
 
+  .section-vacancy {
+    width: 100%;
+    margin: 116px auto;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.05);
+
+    &__block {
+      background-color: #ffffff;
+      border-radius: 6px 6px 0 0;
+      padding: 40px;
+      font-size: 26px;
+    }
+  }
+
   .text-description {
     width: 250px;
   }
@@ -1295,8 +1231,28 @@ span {
     height: 50px;
 
     &__block {
-      margin: 0 30px 0 0;
+      margin: 0 15px 0 0;
     }
+  }
+
+  .popup {
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__block {
+      padding: 50px 30px;
+      width: 322px;
+    }
+  }
+
+  .ui-input {
+    width: 100%;
+  }
+
+  .input-order {
+    width: 285px;
   }
 
   .swiper-slide {
@@ -1317,17 +1273,33 @@ span {
     }
   }
 
- .card-order {
-   
+  .card-order {
 
     &__img {
       max-width: 56px;
       max-height: 34px;
     }
+
+    &__img-icon {
+      flex-direction: column-reverse;
+      min-width: 54px;
+    }
+
+    &__icon {
+      margin: 2px 4px;
+    }
+
+    &__info {
+      display: block;
+      width: 100%;
+    }
   }
 
   .icon-block {
+    margin: 0 0 0 0;
     flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .section-popular {
@@ -1357,9 +1329,11 @@ span {
     &__bg-orange {
       display: none;
     }
+
     &__bg-green {
       display: none;
     }
+
     &__bg-pink {
       display: none;
     }
@@ -1407,5 +1381,11 @@ span {
 
   .button {
     padding: 14.5px 20px;
+  }
+
+  .order-block {
+    &__section {
+      flex-wrap: wrap;
+    }
   }
 }
