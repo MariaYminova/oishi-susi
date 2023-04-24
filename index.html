@@ -1,0 +1,32 @@
+<html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Document</title><script defer="defer" src="bundle.js"></script><link href="main.css" rel="stylesheet"></head><body><style>.hbs-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      margin: 0 auto;
+      max-width: 200px;
+      color: rgb(39, 39, 203);
+      text-align: center
+    }
+
+    .hbs-page-list {
+      padding: 30px 0 20px 0px;
+      margin: 0 auto;
+      max-width: 200px;
+      margin-bottom: 20px;
+      counter-reset: linksCounter;
+
+    }
+
+    li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      border: 2px solid rgb(140, 140, 202);
+      padding: 10px 20px;
+      border-radius: 5px;
+      counter-increment: linksCounter;
+
+    }
+
+    li::before {
+      content: counter(linksCounter) ".";
+    }</style><div class="hbs-title">Page lists</div><ul class="hbs-page-list"><li><a href="/account">account</a></li><li><a href="/catalog">catalog</a></li><li><a href="/main">main</a></li><li><a href="/map">map</a></li><li><a href="/order">order</a></li><li><a href="/vacancy">vacancy</a></li></ul></body></html>
