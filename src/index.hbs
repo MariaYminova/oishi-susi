@@ -25,7 +25,6 @@
       max-width: 200px;
       margin-bottom: 20px;
       counter-reset: linksCounter;
-
     }
 
     li {
@@ -35,27 +34,22 @@
       padding: 10px 20px;
       border-radius: 5px;
       counter-increment: linksCounter;
-
     }
 
     li::before {
       content: counter(linksCounter) ".";
     }
   </style>
-
     <div class="hbs-title">
       Page lists
     </div>
  
   <ul class="hbs-page-list">
-
     {{#each pages}}
     <li>
       <a href="/{{this}}">{{this}}</a>
     </li>
     {{/each}}
   </ul>
-
 </body>
-
 </html>

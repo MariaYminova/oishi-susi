@@ -4,38 +4,40 @@
 
 <section class="filter">
   <div class="filter__left">
-    <button class="button-transparent"> Роллы <div class="button-filter-on"></div>
+    <button class="button-transparent">Роллы<div class="button-filter-on"></div>
     </button>
-    <button class="button-transparent">Сеты <div class="button-filter-on"></div></button>
-    <button class="button-transparent">Запеченные роллы <div class="button-filter-on"></div></button>
-    <button class="button-transparent">Воки <div class="button-filter-on"></div></button>
-    <button class="button-transparent">Супы <div class="button-filter-on"></div></button>
-    <button class="button-transparent">Напитки <div class="button-filter-on"></div></button>
+    <button class="button-transparent">Сеты<div class="button-filter-on"></div></button>
+    <button class="button-transparent">Запеченные роллы<div class="button-filter-on"></div></button>
+    <button class="button-transparent">Воки<div class="button-filter-on"></div></button>
+    <button class="button-transparent">Супы<div class="button-filter-on"></div></button>
+    <button class="button-transparent">Напитки<div class="button-filter-on"></div></button>
   </div>
+
   <div class="filter__line"></div>
+
   <div class="filter__right">
     <button class="button-with-icon"><img class="m-r-10" src="@assets/icon/icon-star.svg" alt=" "> Популярное</button>
     <button class="button-with-icon"> <img class="m-r-10" src="@assets/icon/icon-vegi.svg" alt=" ">
       Вегетарианское</button>
     <button class="button-with-icon"> <img class="m-r-10" src="@assets/icon/icon-hot.svg" alt=" "> Острое</button>
   </div>
+
   <div class="filter__mob">
     <div class="igra filter__mob-text">Фильтры</div>
     <div class="ui-select ui-select--filter">
       <select class="customSelect roboto roboto-16 roboto-orange">
-        <option class="roboto roboto-16 roboto-orange" >Роллы</option>
-        <option>Сеты </option>
-        <option>Запеченные роллы </option>
-        <option>Воки </option>
-        <option>Супы </option>
-        <option>Напитки </option>
+        <option class="roboto roboto-16 roboto-orange">Роллы</option>
+        <option>Сеты</option>
+        <option>Запеченные роллы</option>
+        <option>Воки</option>
+        <option>Супы</option>
+        <option>Напитки</option>
       </select>
     </div>
   </div>
 </section>
 
 <div class="people_list row">
-
   {{#each cards}}
   <div class="
     col-xs-12
@@ -45,7 +47,6 @@
     {{> ../../components/card.hbs}}
   </div>
   {{/each}}
-
 </div>
 
 {{> ../../components/wrap-footer.hbs}}

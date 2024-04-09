@@ -4,7 +4,7 @@
   <h2 class="igra heading">Оформление заказа</h2>
   <div class="row">
     <div class="col-xs-12
-    col-lg-6">
+      col-lg-6">
       <div class="order-block">
         {{#each cards-order}}
         {{> ../../components/card-order.hbs}}
@@ -19,41 +19,40 @@
     <div class="col-xs-12
     col-lg-6">
       <div class="order-block">
-        <div class=" order-block__section">
-          <div class="m-r-38">
+        <div class="order-block__section">
+          <div class="m-r-38 order-block__input">
             <div class="igra m-b-25">Личные данные</div>
-            <div class="igra igra-12 order-text-after m-b-5">Ваше имя </div>
+            <div class="igra igra-12 order-text-after m-b-5">Ваше имя</div>
             <input class="ui-input m-b-30" placeholder="Ваше имя" type="text">
-            <div class="igra igra-12 order-text-after m-b-5">Номер телефона </div>
+            <div class="igra igra-12 order-text-after m-b-5">Номер телефона</div>
             <input id="phone-mask" class="input-order input-number js-phone-mask m-b-30" type="text"
               placeholder="Номер">
             <div class="igra igra-12 m-b-5">Комментарии к заказу </div>
             <textarea rows="2" class="input-order input-order__comments m-b-20"
               placeholder="Например: Нет домофона"></textarea>
           </div>
-          <div>
+          <div class="order-block__input">
             <div class="igra m-b-25">Доставка</div>
-            <div class="igra igra-12 m-b-5 ">Выберите адрес</div>
+            <div class="igra igra-12 m-b-5">Выберите адрес</div>
             <div class="ui-select">
               <select>
-                <option class="roboto roboto-14" value="foo">ул. Пушкинская 11</option>
-                <option value="buz">ул. Ленина 89 </option>
+                <option class="roboto roboto-14">ул. Пушкинская 11</option>
+                <option >ул. Ленина 89</option>
               </select>
             </div>
-            <div class="igra igra-12 order-text-after m-b-5">Улица </div>
-            <input class=" ui-input input-order m-b-30" type="text" placeholder="Укажите улицу доставки">
-            <div class="igra igra-12 order-text-after m-b-5">Номер дома </div>
+            <div class="igra igra-12 order-text-after m-b-5">Улица</div>
+            <input class="ui-input input-order m-b-30" type="text" placeholder="Укажите улицу доставки">
+            <div class="igra igra-12 order-text-after m-b-5">Номер дома</div>
             <input class="ui-input input-order m-b-30" type="text" placeholder="Номер дома">
             <div class="igra igra-12  order-text-after m-b-5">Номер квартиры </div>
             <input class="ui-input input-order m-b-30" type="text" placeholder="Номер квартиры">
           </div>
         </div>
-        <div class="display-flex">
-          <input class="checkbox m-r-10" type="checkbox">
-          <div class="roboto roboto-14">Я согласен с <a class="roboto-orange" href=" ">политикой обраотки персональных
-              данных</a> </div>
-        </div>
-        <button class="button m-t-26"> Оформить заказ</button>
+        <label class="display-flex">
+          <input class="checkbox m-r-10" type="checkbox" name="checkbox">
+          <div class="roboto roboto-14">Я согласен с <a class="roboto-orange" href="#">политикой обраотки персональных данных</a> </div>
+        </label>
+        <button class="button m-t-26">Оформить заказ</button>
       </div>
     </div>
   </div>

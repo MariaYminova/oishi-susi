@@ -1,4 +1,5 @@
 .ui-select {
+  
   .custom-select {
     &-opener {
       background-color: #fefefe00;
@@ -49,7 +50,9 @@
     }
 
     &-container {
-      
+      transform: none;
+      transition: none;
+
       &.is-open .custom-select-panel {
         overflow: inherit;
         width: 100%;
@@ -67,7 +70,7 @@
 
     @media (max-width: 850px) {
       &-opener {
-        width: 285px;
+        width: 100%;
       }
       &-option {
         width: 100%;
@@ -98,6 +101,7 @@
 
       &-container {
         width: 193px;
+
         &.is-open .custom-select-panel {
           width: 193px;
         }
